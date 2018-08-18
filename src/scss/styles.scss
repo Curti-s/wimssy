@@ -15,6 +15,15 @@ body {
     font-family: "Raleway",Arial, Helvetica, sans-serif;
     height: 100%;
 }
+.btn-outline-secondary {
+                
+    color: $warm;
+    border: 1px solid $highlight;
+}
+.btn-outline-secondary:active, .btn-outline-secondary:hover, .btn-outline-secondary:focus {
+    border: 1px solid $warm;
+    background: $peach;
+}
 
 .content-hr {
     width: 5rem;
@@ -32,9 +41,9 @@ body {
         text-transform: capitalize;
         font-size: 2rem;
     }
-    .navbar-brand:active, .navbar-brand:hover, .navbar-brand:focus {
+    // .navbar-brand:active, .navbar-brand:hover, .navbar-brand:focus {
         
-    }
+    // }
     .navbar-toggler {
         color: $menu-color;
         background-color: transparent;
@@ -215,8 +224,38 @@ body {
 	}
 }
 
-/*mdeia*/
+/*media*/
 #media {
-    padding: 5rem 0;
+    padding: 3rem 2rem;
     background-color: $grey;
+    width: 100%;
+    height:100%;
+}
+
+
+/*contact*/
+#contact {
+    padding: 5rem 0;
+
+    .form-container {
+        width: 768px;
+    }
+    .contact-title {
+        font-family: "Berkshire Swash", cursive;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+    .lead {
+        color: $light-text;
+        font-size: .85rem;
+    }
+
+    .form-container {
+        margin-top: 5rem;
+    }
+}
+
+/*footer*/
+#footer {
+    background-color: $menu-color;
 }

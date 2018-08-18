@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="vendor/baguettebox/baguetteBox.min.css">
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Playball|Raleway|Norican" rel="stylesheet">
+    <!--google maps api-->
+    <!-- <link rel="stylesheet" href="http://maps.googleapis.com/"> -->
     <!--custom css-->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -238,21 +240,60 @@
     <section id="media">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12">
-
+                <div class="col-xs-12 m-auto embed-responsive embed-responsive-16by9">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/w0SJdZkgCu8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="embed-responsive-item"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!--media-->
 
+    <!--contact-->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="contact-title text-center">Get in touch</h2>
+                    <hr class="content-hr">
+                    <p class="lead text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, repellendus? Soluta fugit.</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="col-12" id="map" style="width:100%; height: 400px; overflow: hidden;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container form-container">
+            <form action="">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" id="inputName" class="form-control" placeholder="Your name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-outline-secondary m-auto">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--contact-->
+
     <!--footer-->
     <section id="footer">
-        <footer class="py-5 bg-dark">
+        <footer class="py-5">
             <div class="container">
-              <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+              <p class="m-0 text-center text-white">Copyright &copy; Wimssy Yoghurts 2018</p>
             </div>
-           
         </footer>
     </section>
     <!--footer-->
@@ -264,5 +305,21 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendor/baguettebox/baguetteBox.min.js"></script>
     <script> baguetteBox.run('.cards-gallery', { animation: 'slideIn'}); </script>
+    <script>
+        function initMap() {
+            // wimssy location
+            var wim = {
+                lat: 1.2866,
+                lng: 36.9825
+            };
+            //center the map at wimssy
+            const map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 15, center: wim}
+            );
+            const marker = new google.maps.Marker({position: wim, map:map});
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_K_n_wYM3SKs5x1FYjki2w4eJNYZ7Kj4&callback=initMap">
+    </script>
 </body>
 </html>
