@@ -1,0 +1,24 @@
+{
+  "name": "wimssy",
+  "version": "1.0.0",
+  "description": "A responsive website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "'curti-s'",
+  "license": "'MIT'",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
+    "baguettebox.js": "^1.10.0",
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
