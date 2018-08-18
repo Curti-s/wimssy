@@ -51,12 +51,12 @@ gulp.task('sass', function() {
 gulp.task('browserSync',['sass','vendor'], function() {
   browserSync.init({
     server: {
-      baseDir: "./src"
+      baseDir: "./"
     }
   });
   gulp.watch('./src/scss/*.scss',['sass']);
   gulp.watch('./src/css/*.css', browserSync.reload);
-  gulp.watch('./src/*.html', browserSync.reload);
+  gulp.watch('index.html', browserSync.reload);
 });
 
 // Default task
